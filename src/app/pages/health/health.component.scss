@@ -1,0 +1,109 @@
+.health-section {
+  height: 170px;
+  background-color: #FFF;
+}
+
+::ng-deep.mat-grid-list {
+  max-height: 170px;
+}
+
+.title-health {
+  font-family: 'Rubik';
+  font-size: 32px;
+  color: #04bc8c;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-bottom: 25px;
+  height: 100%;
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  padding: 0px 30px;
+
+  ::ng-deep.mat-icon {
+    font-size: 35px;
+    margin-left: 10px;
+    color: #8BE43D;
+  }
+}
+
+.insurance-section {
+  height: 120px;
+  background-color: #CAF3A5;
+
+  .image-logo{
+    position: fixed;
+    padding-left: 30%;
+  }
+
+  .select-configuration {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    .answer {
+      font-family: 'Rubik';
+      font-size: 18px;
+    }
+
+    ::ng-deep.mat-form-field {
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    ::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
+      background-color: #DAF7C0;
+    }
+
+  }
+
+  .fab-button-call {
+    margin-right: 30px;
+  }
+}
+
+.button-section {
+  height: 220px;
+  background-color: #EFEFEF;
+
+  .find-button-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 25px;
+
+    .find-button {
+      border-radius: 50px;
+      width: 250px;
+      height: 50px;
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .search-button {
+      border-radius: 50px;
+      width: 170px;
+      height: 30px;
+      font-family: Roboto;
+      font-weight: 300;
+      font-size: 12px;
+      background-color: #FFBE00;
+      color: #000;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'node_modules/@angular/material' as mat;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-h5 {
+  color: red;
+  size: 50px;
+}
+@include mat.core();
+
+
+$asershopPrimary: (
+  50 : #f1fce8,
+  100 : #dcf7c5,
+  200 : #c5f29e,
+  300 : #aeec77,
+  400 : #9ce85a,
+  500 : #8be43d,
+  600 : #83e137,
+  700 : #78dd2f,
+  800 : #6ed927,
+  900 : #5bd11a,
+  A100 : #ffffff,
+  A200 : #e0ffd2,
+  A400 : #beff9f,
+  A700 : #adff85,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$asershopSecondary: (
+  50 : #e1f7f1,
+  100 : #b4ebdd,
+  200 : #82dec6,
+  300 : #4fd0af,
+  400 : #2ac69d,
+  500 : #04bc8c,
+  600 : #03b684,
+  700 : #03ad79,
+  800 : #02a56f,
+  900 : #01975c,
+  A100 : #c2ffe4,
+  A200 : #8fffcd,
+  A400 : #5cffb6,
+  A700 : #42ffaa,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$my-primary: mat.define-palette($asershopPrimary, 500);
+$my-accent: mat.define-palette($asershopSecondary, 500);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+    warn: $my-warn,
+  )
+));
+
+@include mat.core-theme($my-theme);
+@include mat.all-component-themes($my-theme);

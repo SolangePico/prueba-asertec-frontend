@@ -1,0 +1,43 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  padding: 0px 30px;
+  .mat-icon {
+    margin-left: 15px;
+    color: #FFF;
+  }
+}
+
+
+::ng-deep.mat-tab-group {
+  background-color: #04bc8c;
+
+
+  .mat-icon:not(mat-tab-disabled) {
+    color: #FFF;
+  }
+
+  .label-span:not(mat-tab-disabled){
+    color: #FFF;
+  }
+
+  .mat-tab-label:not(.mat-tab-disabled) {
+    opacity: 1;
+  }
+
+  ::ng-deep.mat-tab-label-active {
+    .mat-icon {
+      color: #8BE43D;
+      opacity: 1;
+    }
+
+    .label-span{
+      color: #8BE43D;
+      opacity: 1;
+    }
+  }
+}
+
+

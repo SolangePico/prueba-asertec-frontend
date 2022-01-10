@@ -1,0 +1,67 @@
+<div class="health-section">
+  <mat-grid-list cols="3" rowHeight="170px">
+    <mat-grid-tile>
+      <div></div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <span class="title-health">Cotiza tu seguro de salud</span>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="social-icons">
+        <mat-icon fontSet="material-icons-outlined">stars</mat-icon>
+        <mat-icon fontSet="material-icons-outlined">paid</mat-icon>
+        <mat-icon fontSet="material-icons-outlined">pending</mat-icon>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div class="insurance-section">
+  <mat-grid-list cols="3" rowHeight="120px">
+    <mat-grid-tile colspan="1">
+        <img class="image-logo" mat-card-image src="assets/asershop_header_salud.png"/>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2">
+      <div class="select-configuration">
+        <span class="answer">¿Cuántas personas quieres asegurar?</span>
+        <mat-form-field appearance="fill">
+          <mat-select [(ngModel)]="personQuantitySelected">
+            <mat-option [value]="-1">Seleccione una opción</mat-option>
+            <mat-option *ngFor="let option of question1Options" [value]="option.id">
+              {{option.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <span class="answer">Edad</span>
+        <mat-form-field appearance="fill">
+          <mat-select [(ngModel)]="ageSelected">
+            <mat-option [value]="-1">Seleccione una opción</mat-option>
+            <mat-option *ngFor="let option of question2Options" [value]="option.id">
+              {{option.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <button class="fab-button-call" mat-fab color="accent">
+        <mat-icon>phone_in_talk</mat-icon>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<div class="button-section">
+  <mat-grid-list cols="3" rowHeight="220px">
+    <mat-grid-tile colspan="1">
+      <div></div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="find-button-section">
+        <button class="find-button" mat-raised-button color="accent" (click)="searchProductsInsurance()">Buscar un seguro</button>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="find-button-section">
+        <button class="search-button" mat-raised-button color="accent">Ver todos los seguros</button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
